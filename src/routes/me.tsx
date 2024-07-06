@@ -26,7 +26,7 @@ export function MeRoute() {
 
   return (
     <>
-      <h2>My User Account Details</h2>
+      <h2 className="mt-5">My User Account Details</h2>
       <pre>{JSON.stringify(myUserResponse, null, 2)}</pre>
     </>
   );

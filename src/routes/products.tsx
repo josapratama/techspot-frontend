@@ -17,16 +17,11 @@ export async function loader() {
   return { products };
 }
 
-export function HomeRoute() {
+export function ProductsRoute() {
   const { products } = useLoaderData() as Awaited<ReturnType<typeof loader>>;
 
   return (
     <>
-      <img
-        src="https://images.unsplash.com/photo-1598327105666-5b89351aff97?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8M3x8c21hcnRwaG9uZXxlbnwwfHwwfHx8MA%3D%3D"
-        alt=""
-        className="h-screen w-full object-cover"
-      />
       <div className="container pt-10">
         <div className="grid grid-cols-2 lg:grid-cols-4 gap-4">
           {products.map((product) => (
